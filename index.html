@@ -64,7 +64,7 @@ header.site{
   backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); border-bottom:1px solid var(--line);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
-.nav-row{ display:flex; align-items:center; gap:16px; padding:12px 20px; }
+.nav-row{ display:flex; align-items:center; gap:16px; padding:12px 20px; flex-wrap: wrap; justify-content: space-between; }
 .brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
 .brand-mark{
   width:55px; height:55px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center;
@@ -100,6 +100,14 @@ header.site{
   color:var(--ocean-deep); background:rgba(255,255,255,0.5); white-space:nowrap; transition:all .3s; cursor:pointer;
 }
 .cat-pill.active, .cat-pill:hover{ background:var(--crab-coral); border-color:var(--crab-coral); color:#fff; box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4); transform: translateY(-2px); }
+
+/* الموبايل ريسبونسف للهيدر */
+@media (max-width: 768px) {
+  .search-wrap { order: 3; flex: 1 1 100%; max-width: 100%; margin-top: 15px; }
+  .brand-name { font-size: 1.3rem; }
+  .brand-name small { font-size: 0.7rem; }
+  .brand-mark { width: 45px; height: 45px; }
+}
 
 /* ============ HERO ============ */
 .hero{ position:relative; overflow:hidden; background: linear-gradient(180deg, var(--ocean-deep) 0%, #0077b6 100%); color:#fff; padding:80px 20px 100px; text-align:center; }
@@ -148,7 +156,7 @@ header.site{
 .card-media img{width:100%; height:100%; object-fit:contain; filter: drop-shadow(0 15px 15px rgba(0,0,0,0.2)); transition: transform 0.5s;}
 .card:hover .card-media img { transform: scale(1.1) rotate(2deg); }
 
-.badge-discount{ position:absolute; top:15px; inset-inline-start:15px; z-index: 5; background:var(--claw-red); color:#fff; font-family:var(--font-mono); font-size:.8rem; font-weight:900; padding:6px 12px; border-radius:10px; box-shadow:0 5px 15px rgba(220, 47, 2, 0.5); transform:rotate(-5deg); }
+.badge-discount{ position:absolute; top:15px; inset-inline-start:15px; z-index: 5; background:var(--claw-red); color:#fff; font-family:var(--font-display); font-size:1rem; padding:6px 12px; border-radius:10px; box-shadow:0 5px 15px rgba(220, 47, 2, 0.5); transform:rotate(-5deg); }
 .badge-soon{ position:absolute; inset:0; background:rgba(5, 25, 35, 0.85); z-index: 10; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:#fff; text-align:center; backdrop-filter:blur(4px); }
 .badge-soon b{font-family:var(--font-display); font-size:1.8rem; color:var(--crab-coral);}
 .card.disabled{ opacity:0.95; pointer-events: none; }
@@ -158,7 +166,7 @@ header.site{
 .card-body p.desc{font-size:.9rem; color:#4a5568; line-height:1.6; min-height:2.8em; font-weight: 500;}
 .price-row{display:flex; align-items:center; gap:12px; margin-top:auto; padding-top:10px;}
 .price-now{font-family:var(--font-display); font-size:1.5rem; color:var(--crab-coral-dark); letter-spacing: 1px;}
-.price-old{font-family:var(--font-mono); font-size:.95rem; color:#a0aec0; text-decoration:line-through;}
+.price-old{font-family:var(--font-body); font-weight:bold; font-size:.95rem; color:#a0aec0; text-decoration:line-through;}
 .add-btn{ margin-top:15px; width:100%; padding:14px; border-radius:12px; background:var(--ocean-deep); color:#fff; font-weight:800; font-size:1rem; transition:all .3s; display:flex; align-items:center; justify-content:center; gap:8px; border: 2px solid transparent; cursor: pointer; pointer-events: auto; }
 .add-btn:hover{ background:var(--crab-coral); box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4); transform: translateY(-2px);}
 .add-btn:active{transform:scale(.95);}
@@ -640,7 +648,6 @@ function renderModalStep(){
     if(nextBtn) nextBtn.addEventListener('click', ()=>{ checkoutStep=3; renderModalStep(); });
   }
   else if(checkoutStep === 3){
-    // شاشة النهاية (الكشف عن المقلب)
     modalBox.innerHTML = `
       <div class="modal-body">
         <div class="joke-screen">
