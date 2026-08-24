@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سلطع برجر 🦀 | أفضل برجر في المحيط</title>
+<meta name="description" content="اطلب الآن أشهى وجبات البرجر من سلطع برجر، توصيل سريع وطعم لا يقاوم!">
+<meta name="theme-color" content="#051923">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+<style>
+/* ============ TOKENS & ANIMATIONS ============ */
+:root{
+  --ocean-deep:#051923;
+  --ocean-deeper:#000814;
+  --shell-cream:#FFF3E0;
+  --crab-coral:#ff9e00;
+  --crab-coral-dark:#e85d04;
+  --claw-red:#dc2f02;
+  --seafoam:#00b4d8;
+  --ink:#122320;
+  --paper:#e0fbfc;
+  --line: rgba(0, 180, 216, 0.2);
+  --shadow-pop: 0 15px 35px rgba(0, 180, 216, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --radius-lg: 26px;
+  --font-display:'Lalezar', system-ui, sans-serif;
+  --font-body:'Tajawal', system-ui, sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{ font-family:var(--font-body); background:var(--paper); color:var(--ink); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+input, textarea{font-family:inherit;}
+:focus-visible{outline:3px solid var(--seafoam); outline-offset:2px;}
+.container{width:100%; max-width:1180px; margin:0 auto; padding:0 20px; position: relative; z-index: 2;}
+
+@keyframes neon-pulse {
+  0% { box-shadow: 0 0 10px var(--seafoam), 0 0 20px var(--seafoam), 0 0 30px var(--ocean-deep); }
+  50% { box-shadow: 0 0 20px #90e0ef, 0 0 35px #90e0ef, 0 0 50px var(--seafoam); transform: scale(1.02); }
+  100% { box-shadow: 0 0 10px var(--seafoam), 0 0 20px var(--seafoam), 0 0 30px var(--ocean-deep); }
+}
+@keyframes float-bubbles {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+@keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+/* ============ TOP BAR ============ */
+.topbar{
+  background: linear-gradient(90deg, var(--ocean-deep), var(--claw-red), var(--ocean-deep));
+  background-size: 200% 200%; animation: gradientShift 5s ease infinite; color:#fff;
+  font-family:var(--font-body); font-size:.9rem; font-weight: bold; text-align:center; padding:10px; letter-spacing:.03em;
+}
+
+/* ============ HEADER ============ */
+header.site{
+  position:sticky; top:0; z-index:50; background:rgba(255, 255, 255, 0.85);
+  backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); border-bottom:1px solid var(--line);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+.nav-row{ display:flex; align-items:center; gap:16px; padding:12px 20px; }
+.brand{display:flex; align-items:center; gap:12px; flex-shrink:0;}
+.brand-mark{
+  width:55px; height:55px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center;
+  overflow:hidden; animation: neon-pulse 2.5s infinite; position:relative; transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.brand-mark:hover{ animation: none; transform: rotate(-15deg) scale(1.2); box-shadow: 0 0 30px var(--crab-coral), 0 0 60px var(--claw-red); border: 2px solid var(--crab-coral); }
+.brand-mark img{width:100%; height:100%; object-fit:cover;}
+.brand-name{font-family:var(--font-display); font-size:1.6rem; color:var(--ocean-deep); line-height:1; text-shadow: 1px 1px 0px rgba(0,0,0,0.1);}
+.brand-name small{display:block; font-family:var(--font-body); font-size:.8rem; color:var(--crab-coral-dark); font-weight: bold;}
+
+.search-wrap{ flex:1; max-width:450px; position:relative; margin:0 auto; }
+.search-wrap input{
+  width:100%; padding:12px 42px 12px 20px; border-radius:999px; border:2px solid transparent;
+  background:rgba(0, 180, 216, 0.08); font-size:.95rem; color:var(--ink); font-weight: bold; transition:all .3s; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+.search-wrap input:focus{ border-color:var(--seafoam); background:#fff; box-shadow:0 0 15px rgba(0, 180, 216, 0.3); }
+
+.cart-btn{
+  position:relative; display:flex; align-items:center; gap:8px; background: linear-gradient(135deg, var(--ocean-deep), #023e8a);
+  color:#fff; padding:12px 20px; border-radius:999px; font-weight:900; font-size:.9rem; flex-shrink:0; transition:all .3s; box-shadow: 0 5px 15px rgba(5, 25, 35, 0.3);
+}
+.cart-btn:hover{ transform:translateY(-3px); box-shadow: 0 8px 20px rgba(5, 25, 35, 0.5); }
+.cart-badge{
+  position:absolute; top:-8px; inset-inline-start:-8px; background:var(--claw-red); color:#fff; font-weight: bold;
+  font-size:.75rem; min-width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  border:2px solid #fff; box-shadow: 0 0 10px var(--claw-red);
+}
+
+.cat-nav{ display:flex; gap:10px; overflow-x:auto; padding:10px 20px 16px; scrollbar-width:none; }
+.cat-nav::-webkit-scrollbar{display:none;}
+.cat-pill{
+  flex-shrink:0; padding:10px 22px; border-radius:999px; border:2px solid var(--line); font-size:.9rem; font-weight:800;
+  color:var(--ocean-deep); background:rgba(255,255,255,0.5); white-space:nowrap; transition:all .3s; cursor:pointer;
+}
+.cat-pill.active, .cat-pill:hover{ background:var(--crab-coral); border-color:var(--crab-coral); color:#fff; box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4); transform: translateY(-2px); }
+
+/* ============ HERO ============ */
+.hero{ position:relative; overflow:hidden; background: linear-gradient(180deg, var(--ocean-deep) 0%, #0077b6 100%); color:#fff; padding:80px 20px 100px; text-align:center; }
+.bubbles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: 1;}
+.bubble { position: absolute; bottom: -20px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; animation: float-bubbles 5s infinite ease-in; }
+.hero-inner{position:relative; z-index:2; max-width:800px; margin:0 auto;}
+.hero .eyebrow{ font-family:var(--font-body); font-weight: bold; font-size:1rem; letter-spacing:.05em; color:var(--crab-coral); background: rgba(0,0,0,0.3); padding: 5px 15px; border-radius: 20px; display:inline-flex; align-items:center; gap:8px; margin-bottom: 20px; }
+.hero h1{ font-size:clamp(2.8rem, 8vw, 5.5rem); line-height:1.1; color:#fff; text-shadow: 0 10px 20px rgba(0,0,0,0.3), 0 0 40px rgba(0, 180, 216, 0.5); }
+.hero h1 span{ color:var(--crab-coral); text-shadow: 0 0 30px var(--crab-coral); }
+.hero p.sub{ font-size:clamp(1.1rem, 2.5vw, 1.3rem); color:#e0fbfc; opacity:.9; max-width:600px; margin:20px auto 40px; line-height:1.8; font-weight: 500; }
+.hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+.btn-primary{
+  background: linear-gradient(45deg, var(--claw-red), var(--crab-coral-dark)); color:#fff; font-weight:900; font-size:1.1rem;
+  padding:16px 36px; border-radius:999px; box-shadow:0 10px 30px rgba(220, 47, 2, 0.5); transition:all .3s; border: 2px solid transparent;
+}
+.btn-primary:hover{ transform:translateY(-5px) scale(1.05); box-shadow:0 15px 40px rgba(220, 47, 2, 0.7); }
+.btn-ghost{ border:2px solid var(--seafoam); color:var(--seafoam); font-weight:800; font-size: 1.1rem; padding:16px 36px; border-radius:999px; transition:all .3s; background: rgba(0, 180, 216, 0.1); }
+.btn-ghost:hover{ background:var(--seafoam); color:var(--ocean-deep); box-shadow: 0 0 20px var(--seafoam); }
+
+.hero-stats{ display:flex; justify-content:center; gap:40px; margin-top:60px; flex-wrap:wrap; }
+.hero-stat{text-align:center; background: rgba(255,255,255,0.05); padding: 15px 25px; border-radius: 20px; backdrop-filter: blur(5px);}
+.hero-stat b{display:block; font-family:var(--font-display); font-size:2rem; color:var(--crab-coral);}
+.hero-stat span{font-size:.9rem; opacity:.9; font-weight: bold;}
+.wave{display:block; margin-top:-2px; line-height:0;}
+.wave svg{width:100%; height:80px; display:block;}
+
+/* ============ SECTION HEADERS ============ */
+.section{padding:80px 0;}
+.section-head{text-align:center; max-width:600px; margin:0 auto 50px;}
+.section-head h2{font-size:clamp(2.2rem, 5vw, 3rem); color:var(--ocean-deep); margin-top:10px;}
+.section-head p{color:#4a5568; margin-top:10px; line-height:1.7; font-size: 1.1rem; font-weight: 500;}
+
+/* ============ MENU GRID ============ */
+.menu-block{margin-bottom:60px;}
+.menu-block-title{ display:flex; align-items:center; gap:16px; margin-bottom:30px; padding:0 10px; }
+.menu-block-title h3{font-size:1.8rem; color:var(--ocean-deep);}
+.menu-block-title .rule{flex:1; height:3px; background:repeating-linear-gradient(90deg, var(--crab-coral) 0 10px, transparent 10px 20px); opacity: 0.5;}
+
+.grid{ display:grid; gap:25px; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); }
+.card{
+  background: var(--glass-bg); border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(255,255,255,0.5); position:relative;
+  transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275); display:flex; flex-direction:column; box-shadow: 0 10px 30px rgba(0,0,0,0.08); backdrop-filter: blur(10px);
+}
+.card:hover{ transform:translateY(-12px); box-shadow: 0 20px 40px rgba(0, 180, 216, 0.2); border-color: var(--seafoam); }
+.card-media{ aspect-ratio:1/1; background:#fff; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; padding: 20px; }
+.card-media img{width:100%; height:100%; object-fit:contain; filter: drop-shadow(0 15px 15px rgba(0,0,0,0.2)); transition: transform 0.5s;}
+.card:hover .card-media img { transform: scale(1.1) rotate(2deg); }
+
+.badge-discount{ position:absolute; top:15px; inset-inline-start:15px; z-index: 5; background:var(--claw-red); color:#fff; font-family:var(--font-mono); font-size:.8rem; font-weight:900; padding:6px 12px; border-radius:10px; box-shadow:0 5px 15px rgba(220, 47, 2, 0.5); transform:rotate(-5deg); }
+.badge-soon{ position:absolute; inset:0; background:rgba(5, 25, 35, 0.85); z-index: 10; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:#fff; text-align:center; backdrop-filter:blur(4px); }
+.badge-soon b{font-family:var(--font-display); font-size:1.8rem; color:var(--crab-coral);}
+.card.disabled{ opacity:0.95; pointer-events: none; }
+
+.card-body{padding:20px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.card-body h4{font-size:1.3rem; color:var(--ocean-deep); font-weight:900;}
+.card-body p.desc{font-size:.9rem; color:#4a5568; line-height:1.6; min-height:2.8em; font-weight: 500;}
+.price-row{display:flex; align-items:center; gap:12px; margin-top:auto; padding-top:10px;}
+.price-now{font-family:var(--font-display); font-size:1.5rem; color:var(--crab-coral-dark); letter-spacing: 1px;}
+.price-old{font-family:var(--font-mono); font-size:.95rem; color:#a0aec0; text-decoration:line-through;}
+.add-btn{ margin-top:15px; width:100%; padding:14px; border-radius:12px; background:var(--ocean-deep); color:#fff; font-weight:800; font-size:1rem; transition:all .3s; display:flex; align-items:center; justify-content:center; gap:8px; border: 2px solid transparent; cursor: pointer; pointer-events: auto; }
+.add-btn:hover{ background:var(--crab-coral); box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4); transform: translateY(-2px);}
+.add-btn:active{transform:scale(.95);}
+.add-btn.added{background:var(--seafoam); color:var(--ocean-deep); box-shadow: 0 0 15px var(--seafoam);}
+
+/* ============ RATINGS ============ */
+.ratings-wrap{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+@media (max-width:768px){.ratings-wrap{grid-template-columns:1fr;}}
+.rate-card{ background: linear-gradient(135deg, var(--ocean-deep), #023e8a); color:#fff; border-radius:var(--radius-lg); padding:40px; position:relative; overflow:hidden; box-shadow: var(--shadow-pop); }
+.rate-card.alt{background:#fff; color:var(--ink); border:2px solid var(--line);}
+.rate-card h3{font-size:1.6rem; margin-bottom:8px; font-family: var(--font-display);}
+.rate-card .sub{font-size:1rem; opacity:.8; margin-bottom:25px; font-weight: 500;}
+.rate-card.alt .sub{opacity:.7;}
+.stars{display:flex; gap:8px; font-size:2rem; margin-bottom:15px; position: relative; z-index: 5;}
+.stars button{opacity:.3; transition:all .2s;}
+.stars button.active, .stars button:hover{opacity:1; transform:scale(1.2) rotate(-5deg); text-shadow: 0 0 15px gold;}
+.big-score{font-family:var(--font-display); font-size:4rem; color:var(--seafoam); line-height:1; display: block; margin-bottom: 10px;}
+.rate-card.alt .big-score{color:var(--crab-coral);}
+.mascot-img { position: absolute; left: 10px; bottom: 0px; width: 140px; opacity: 0.95; transition: transform 0.3s; mix-blend-mode: multiply; z-index: 1;}
+.rate-card.alt:hover .mascot-img { transform: translateY(-10px) scale(1.05); }
+.rate-content {position: relative; z-index: 5;}
+
+/* ============ LOCATION ============ */
+.loc-wrap{ display:grid; grid-template-columns:1.2fr 1fr; gap:0; border-radius:var(--radius-lg); overflow:hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border:1px solid #fff; background: #fff; }
+@media (max-width:850px){.loc-wrap{grid-template-columns:1fr;}}
+.loc-map{ background: radial-gradient(circle, #e0fbfc 0%, #90e0ef 100%); min-height:300px; position:relative; display:flex; align-items:center; justify-content:center; padding: 20px;}
+.loc-map img { max-width: 90%; max-height: 250px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transform: rotate(-3deg); transition: transform 0.4s; border: 5px solid #fff; object-fit: cover;}
+.loc-map:hover img { transform: rotate(0deg) scale(1.05); }
+.loc-info{padding:40px; display:flex; flex-direction:column; justify-content:center; gap:20px;}
+.loc-info h3{font-size:1.8rem; color:var(--ocean-deep); font-family: var(--font-display);}
+.loc-line{display:flex; gap:12px; align-items:flex-start; font-size:1.05rem; color:#4a5568; line-height:1.6;}
+.loc-line b{color:var(--ink); font-weight:900;}
+
+/* ============ DRAWER & MODALS ============ */
+.overlay-dim{ position:fixed; inset:0; background:rgba(0, 8, 20, 0.7); backdrop-filter: blur(5px); z-index:90; opacity:0; pointer-events:none; transition:opacity .3s; }
+.overlay-dim.open{opacity:1; pointer-events:auto;}
+.drawer{ position:fixed; top:0; bottom:0; inset-inline-end:0; z-index:100; width:min(450px, 100vw); background:#fff; transform:translateX(105%); transition:transform .4s cubic-bezier(0.2, 0.8, 0.2, 1); display:flex; flex-direction:column; box-shadow:-15px 0 40px rgba(0,0,0,0.3); }
+[dir="rtl"] .drawer{transform:translateX(-105%);}
+.drawer.open{transform:translateX(0);}
+.drawer-head{ padding:25px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; background:var(--ocean-deep); color:#fff; }
+.drawer-head h3{font-size:1.4rem; font-family: var(--font-display);}
+.drawer-close{font-size:1.5rem; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.1); transition: all 0.3s;}
+.drawer-close:hover{background:var(--claw-red); transform: rotate(90deg);}
+.drawer-body{flex:1; overflow-y:auto; padding:20px;}
+.cart-item{display:flex; gap:15px; padding:15px 0; border-bottom:1px solid #edf2f7;}
+.cart-item img{width:80px; height:80px; border-radius:12px; object-fit:contain; background:#f7fafc; padding: 5px; flex-shrink:0;}
+.cart-item-info h5{font-size:1.1rem; color: var(--ocean-deep);}
+.drawer-foot{padding:25px; border-top:1px solid var(--line); background:#f7fafc;}
+.total-row{display:flex; justify-content:space-between; font-weight:900; font-size:1.2rem; margin-bottom:20px;}
+.total-row .amt{font-family:var(--font-display); color:var(--crab-coral-dark); font-size: 1.5rem;}
+.checkout-btn{ width:100%; padding:18px; border-radius:15px; background:var(--crab-coral); color:#fff; font-weight:900; font-size:1.1rem; transition:all .3s; }
+.checkout-btn:hover{background:var(--claw-red); transform:translateY(-3px); box-shadow: 0 10px 20px rgba(220, 47, 2, 0.3);}
+
+/* ============ CHECKOUT MODAL ============ */
+.modal-dim{ position:fixed; inset:0; z-index:150; background:rgba(0, 8, 20, 0.8); backdrop-filter: blur(8px); display:none; align-items:center; justify-content:center; padding:20px; }
+.modal-dim.open{display:flex;}
+.modal{ background:#fff; border-radius:var(--radius-lg); width:min(500px,100%); max-height:90vh; overflow-y:auto; box-shadow:0 30px 60px rgba(0,0,0,0.5); }
+.modal-head{padding:30px 30px 0;}
+.modal-body{padding:0 30px 30px;}
+.steps-bar{display:flex; gap:6px; margin-bottom:20px;}
+.steps-bar span{flex:1; height:6px; border-radius:99px; background:#e2e8f0;}
+.steps-bar span.done{background:var(--crab-coral);}
+.form-row{margin-bottom:15px;}
+.form-row label{display:block; font-size:.9rem; font-weight:bold; margin-bottom:8px; color:var(--ocean-deep);}
+.form-row input, .form-row textarea{ width:100%; padding:14px 18px; border-radius:12px; border:2px solid #e2e8f0; font-size:1rem; font-weight: bold; background:#f7fafc; transition: all 0.3s;}
+.form-row input:focus, .form-row textarea:focus{border-color:var(--seafoam); background:#fff; box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.1);}
+.pay-options{display:grid; gap:12px;}
+.pay-opt{ display:flex; align-items:center; gap:12px; padding:16px; border:2px solid #e2e8f0; border-radius:14px; cursor:pointer; transition:all .2s; font-weight: bold; }
+.pay-opt input{accent-color:var(--crab-coral); transform: scale(1.2);}
+.pay-opt.selected{border-color:var(--crab-coral); background:rgba(255, 158, 0, 0.08);}
+.modal-actions{display:flex; gap:12px; margin-top:25px;}
+.btn-back{flex:1; padding:16px; border-radius:12px; border:2px solid #e2e8f0; font-weight:bold; color:var(--ink); font-size: 1.1rem;}
+.btn-back:hover{background:#f7fafc;}
+.btn-next{flex:2; padding:16px; border-radius:12px; background:var(--ocean-deep); color:#fff; font-weight:900; font-size: 1.1rem;}
+.btn-next:hover{background:var(--crab-coral);}
+
+.joke-screen{text-align:center; padding:40px 10px 10px;}
+.ig-btn{ display:inline-flex; align-items:center; justify-content: center; gap:12px; width: 100%; background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color:#fff; font-weight:900; padding:16px; border-radius:15px; font-size:1.1rem; box-shadow:0 10px 25px rgba(214,41,118,0.4); transition:all .3s; margin-top: 20px; text-decoration: none; }
+.ig-btn:hover{transform:translateY(-5px) scale(1.02); box-shadow:0 15px 35px rgba(214,41,118,0.6);}
+
+/* ============ FOOTER ============ */
+footer{ background:var(--ocean-deeper); color:var(--shell-cream); padding:60px 0 30px; margin-top:60px; }
+.foot-grid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.1);}
+.foot-brand img {width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--crab-coral);}
+.foot-links{display:flex; gap:40px; flex-wrap:wrap;}
+.foot-col h5{font-size:1rem; color:var(--seafoam); margin-bottom:15px; font-weight: bold;}
+.foot-col a, .foot-col p{display:block; font-size:.95rem; opacity:.8; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔥 توصيل مجاني لأول طلب لفترة محدودة! اطلب الآن 🔥</div>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <img src="logo.jpg" alt="لوجو المطعم">
+      </span>
+      <span class="brand-name">سلطع برجر<small>أفضل برجر في قاع المحيط</small></span>
+    </a>
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="ابحث عن وجبتك المفضلة... 🍔" autocomplete="off">
+    </div>
+    <button class="cart-btn" id="openCart">
+      🛒 <span style="margin-right: 5px;">الطلب</span>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="cat-nav" id="catNav"></nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="bubbles" id="bubblesContainer"></div>
+  
+  <div class="hero-inner">
+    <span class="eyebrow">🚀 الأسرع والألذ في التوصيل</span>
+    <h1>جاهز تضرب <span>أجمد برجر</span><br>في المحيط؟</h1>
+    <p class="sub">لحم بلدي 100%، خضار طازج، وتوصيل سريع لحد باب البيت. اطلب دلوقتي واستمتع بالطعم الأصلي! 🍔</p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn-primary">تصفح المنيو الآن 🍔</a>
+      <a href="#location" class="btn-ghost">أقرب فرع ليك 📍</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>4.9★</b><span>تقييم العملاء</span></div>
+      <div class="hero-stat"><b>+50</b><span>صنف متنوع</span></div>
+      <div class="hero-stat"><b>30 دقيقة</b><span>توصيل سريع</span></div>
+    </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#e0fbfc" d="M0,32 C240,80 480,0 720,20 C960,40 1200,80 1440,30 L1440,80 L0,80 Z"></path></svg>
+  </div>
+</section>
+
+<main class="container" id="menu">
+  <div class="section-head">
+    <h2 style="font-family: var(--font-display);">قائمة الطعام</h2>
+    <p>اختار اللي يناسب ذوقك من تشكيلة البرجر الطازج والمقرمشات اللذيذة.</p>
+  </div>
+  <div id="menuContainer"></div>
+</main>
+
+<section class="section" style="background:#fff;">
+  <div class="container">
+    <div class="section-head">
+      <h2 style="font-family: var(--font-display);">آراء عملائنا</h2>
+    </div>
+    <div class="ratings-wrap">
+      <div class="rate-card">
+        <span class="big-score">4.9</span>
+        <h3 style="font-family: var(--font-display);">جودة الطعام</h3>
+        <p class="sub">"برجر لا يعلى عليه، طعم خيالي ومكونات طازجة جداً!"</p>
+        <div class="stars" id="siteStars">
+          <button data-v="1">⭐</button><button data-v="2">⭐</button><button data-v="3">⭐</button><button data-v="4">⭐</button><button data-v="5" class="active">⭐</button>
+        </div>
+        <p id="siteStarsNote" style="font-weight: bold; margin-top: 10px;">شاركنا تقييمك</p>
+      </div>
+      <div class="rate-card alt">
+        <img src="mascot_2.jpg" alt="شفيق" class="mascot-img">
+        <div class="rate-content" style="padding-right: 140px;">
+          <span class="big-score">1.2</span>
+          <h3 style="font-family: var(--font-display); margin-top: 5px;">تقييم الكاشير (شفيق)</h3>
+          <p class="sub">"يا ريت تطلب بسرعة وتمشي، أنا مش طايق نفسي أصلاً."</p>
+          <div class="stars" id="staffStars">
+            <button data-v="1">⭐</button><button data-v="2">⭐</button><button data-v="3">⭐</button><button data-v="4">⭐</button><button data-v="5">⭐</button>
+          </div>
+          <p id="staffStarsNote" style="font-weight: bold; margin-top: 10px;">دوس نجمة وفرحه</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="location">
+  <div class="container">
+    <div class="section-head">
+      <h2 style="font-family: var(--font-display);">فروعنا 📍</h2>
+    </div>
+    <div class="loc-wrap">
+      <div class="loc-map">
+        <img src="location.jpg" alt="مطعم سلطع برجر">
+      </div>
+      <div class="loc-info">
+        <h3 style="font-size: 2.2rem;">سلطع برجر - الفرع الرئيسي</h3>
+        <div class="loc-line">📍 <span><b>العنوان:</b> قاع الهامور، شارع المطاعم الرئيسي.</span></div>
+        <div class="loc-line">🕒 <span><b>المواعيد:</b> مفتوح يومياً من 8 صباحاً حتى 4 عصراً فقط.</span></div>
+        <div class="loc-line">🚀 <span><b>خدمة العملاء:</b> متاحين لاستقبال طلباتكم وتوصيلها فوراً خلال أوقات العمل الرسمية.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand" style="display: flex; gap: 15px; align-items: center;">
+        <img src="logo.jpg" alt="Logo">
+        <div>
+          <div style="font-family:var(--font-display); font-size:1.5rem; color: var(--seafoam);">سلطع برجر</div>
+          <div style="font-size:.9rem; opacity:.7; font-weight: bold;">الطعم الأصلي للبرجر</div>
+        </div>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h5>روابط سريعة</h5>
+          <a href="#menu">المنيو</a>
+          <a href="#location">الفروع</a>
+          <a href="#top">أعلى الصفحة</a>
+        </div>
+        <div class="foot-col">
+          <h5>تواصل معنا</h5>
+          <a href="https://www.instagram.com/m3lomh_1_" target="_blank" rel="noopener">انستجرام</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; opacity: 0.5; font-size: 0.9rem; margin-top: 20px;">
+      جميع الحقوق محفوظة © 2026 مطعم سلطع برجر.
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay-dim" id="overlayDim"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>🛒 سلة المشتريات</h3>
+    <button class="drawer-close" id="closeCart">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>الإجمالي:</span><span class="amt" id="cartTotal">0 ج.م</span></div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>إتمام الطلب 🚀</button>
+  </div>
+</aside>
+
+<!-- Checkout Modal -->
+<div class="modal-dim" id="modalDim">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script>
+// دالة التعقيم للحماية من ثغرات الـ XSS (HTML Injection / DOM XSS)
+function escapeHTML(str) {
+  if (!str) return '';
+  return String(str).replace(/[&<>"']/g, function(match) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[match];
+  });
+}
+
+/* توليد فقاعات في الهيدر */
+const bubblesContainer = document.getElementById('bubblesContainer');
+for(let i=0; i<20; i++) {
+  let bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  let size = Math.random() * 30 + 10;
+  bubble.style.width = size + 'px';
+  bubble.style.height = size + 'px';
+  bubble.style.left = Math.random() * 100 + '%';
+  bubble.style.animationDuration = (Math.random() * 4 + 3) + 's';
+  bubble.style.animationDelay = (Math.random() * 5) + 's';
+  bubblesContainer.appendChild(bubble);
+}
+
+/* ============================================================
+   DATA
+=============================================================== */
+const MENU = [
+  { id:'burger', name:'البرجر 🍔', items:[
+    { id:'b1', name:'سلطع كلاسيك', desc:'برجر كلاسيك بطبقة لحم بقري صافي، خس، طماطم، وجبنة شيدر ذائبة.', price:399, oldPrice:450, img:'burger-classic.jpg', soon:false },
+    { id:'b2', name:'دبل سلطع برجر', desc:'لعشاق اللحوم: طبقتين من اللحم البقري مع صوص سلطع السري.', price:750, oldPrice:null, img:'burger-double.jpg', soon:false },
+    { id:'b3', name:'برجر الوحش', desc:'وجبة التحدي الأكبر للبطون الجائعة، طبقات ضخمة من اللحم والجبن.', price:1890, oldPrice:null, img:'burger-50layer.jpg', soon:false },
+  ]},
+  { id:'chicken', name:'فرايد تشكن 🍗', items:[
+    { id:'c1', name:'تشكن كرسبي مقرمش', desc:'قطع الدجاج المقرمشة الذهبية مع توابلنا الخاصة.', price:350, oldPrice:null, img:'chicken-fried.jpg', soon:true },
+  ]},
+  { id:'salads', name:'سلطات وإضافات 🥗', items:[
+    { id:'s1', name:'سلطة خضراء فريش', desc:'تشكيلة من الخضروات الطازجة لتبدأ بها وجبتك.', price:120, oldPrice:null, img:'salad.jpg', soon:false },
+    { id:'d1', name:'مياه معدنية', desc:'زجاجة مياه معدنية نقية ومنعشة.', price:25, oldPrice:null, img:'water.jpg', soon:false },
+    { id:'d2', name:'كتشب إكسترا', desc:'عبوة كتشب إضافية لتستمتع بطعم التغميس.', price:15, oldPrice:null, img:'ketchup.jpg', soon:false },
+  ]},
+];
+
+/* STATE */
+let cart = {}; 
+let currentCategory = 'all';
+let searchTerm = '';
+
+/* RENDER: CATEGORY NAV */
+function renderCatNav(){
+  const nav = document.getElementById('catNav');
+  const cats = [{id:'all', name:'جميع الأصناف'}, ...MENU.map(m=>({id:m.id, name:m.name}))];
+  nav.innerHTML = cats.map(c =>
+    `<button class="cat-pill ${c.id===currentCategory?'active':''}" data-cat="${escapeHTML(c.id)}">${escapeHTML(c.name)}</button>`
+  ).join('');
+  nav.querySelectorAll('.cat-pill').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ currentCategory = btn.dataset.cat; renderCatNav(); renderMenu(); });
+  });
+}
+
+/* RENDER: MENU */
+function renderMenu(){
+  const wrap = document.getElementById('menuContainer');
+  const term = searchTerm.trim().toLowerCase();
+  let blocks = MENU;
+  if(currentCategory !== 'all') blocks = MENU.filter(b => b.id === currentCategory);
+
+  let html = '';
+  blocks.forEach(block=>{
+    let items = block.items;
+    if(term) items = items.filter(it => it.name.toLowerCase().includes(term) || it.desc.toLowerCase().includes(term));
+    if(items.length === 0) return;
+
+    html += `<div class="menu-block">
+      <div class="menu-block-title"><h3>${escapeHTML(block.name)}</h3><div class="rule"></div></div>
+      <div class="grid">`;
+
+    items.forEach(it=>{
+      const qty = cart[it.id] ? cart[it.id].qty : 0;
+      html += `
+        <div class="card ${it.soon?'disabled':''}">
+          <div class="card-media">
+            <img src="${escapeHTML(it.img)}" alt="${escapeHTML(it.name)}">
+            ${it.oldPrice ? `<span class="badge-discount">خصم ${it.oldPrice - it.price} ج</span>` : ''}
+            ${it.soon ? `<div class="badge-soon"><b>سوف يتوفر قريباً ⏳</b></div>` : ''}
+          </div>
+          <div class="card-body">
+            <h4>${escapeHTML(it.name)}</h4>
+            <p class="desc">${escapeHTML(it.desc)}</p>
+            <div class="price-row">
+              <span class="price-now">${it.price} ج.م</span>
+              ${it.oldPrice ? `<span class="price-old">${it.oldPrice} ج.م</span>` : ''}
+            </div>
+            <button class="add-btn ${qty>0?'added':''}" data-id="${escapeHTML(it.id)}">
+              ${it.soon ? 'غير متاح حالياً' : (qty>0 ? `مضاف للسلة (${qty}) ✔️` : 'أضف للطلب 🛒')}
+            </button>
+          </div>
+        </div>`;
+    });
+    html += `</div></div>`;
+  });
+  wrap.innerHTML = html || `<h3 style="text-align:center; color:#777; margin: 50px 0;">لا توجد نتائج مطابقة لبحثك..</h3>`;
+  wrap.querySelectorAll('.add-btn:not(.disabled)').forEach(btn=> btn.addEventListener('click', ()=> addToCart(btn.dataset.id)));
+}
+
+function findItem(id){ for(const b of MENU){ const f = b.items.find(i=>i.id===id); if(f) return f; } return null; }
+
+/* CART LOGIC */
+function addToCart(id){
+  const item = findItem(id);
+  if(!item || item.soon) return;
+  if(cart[id]) cart[id].qty += 1; else cart[id] = { item, qty:1 };
+  updateCartUI(); renderMenu();
+}
+function changeQty(id, delta){
+  if(!cart[id]) return;
+  cart[id].qty += delta;
+  if(cart[id].qty <= 0) delete cart[id];
+  updateCartUI(); renderMenu(); renderDrawer();
+}
+function cartCountTotal(){ return Object.values(cart).reduce((s,c)=>s+c.qty, 0); }
+function cartPriceTotal(){ return Object.values(cart).reduce((s,c)=>s+c.qty*c.item.price, 0); }
+function updateCartUI(){
+  const count = cartCountTotal();
+  document.getElementById('cartCount').textContent = count;
+  document.getElementById('cartTotal').textContent = cartPriceTotal().toLocaleString('en-US') + ' ج.م';
+  document.getElementById('checkoutBtn').disabled = count === 0;
+}
+
+function renderDrawer(){
+  const body = document.getElementById('drawerBody');
+  const entries = Object.values(cart);
+  if(entries.length === 0){ body.innerHTML = `<h4 style="text-align:center; color:#888; margin-top:50px;">سلة المشتريات فارغة..</h4>`; return; }
+  body.innerHTML = entries.map(c=>`
+    <div class="cart-item">
+      <img src="${escapeHTML(c.item.img)}" alt="${escapeHTML(c.item.name)}">
+      <div class="cart-item-info" style="flex:1;">
+        <h5 style="margin-bottom:5px;">${escapeHTML(c.item.name)}</h5>
+        <b style="color:var(--crab-coral-dark);">${c.item.price} ج.م</b>
+        <div style="display:flex; gap:10px; margin-top:10px; align-items:center;">
+          <button style="background:#e2e8f0; width:30px; height:30px; border-radius:50%; font-weight:bold;" onclick="changeQty('${escapeHTML(c.item.id)}', -1)">-</button>
+          <span style="font-weight:bold; font-size:1.1rem;">${c.qty}</span>
+          <button style="background:#e2e8f0; width:30px; height:30px; border-radius:50%; font-weight:bold;" onclick="changeQty('${escapeHTML(c.item.id)}', 1)">+</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* DRAWER OPEN/CLOSE */
+const overlayDim = document.getElementById('overlayDim'), cartDrawer = document.getElementById('cartDrawer');
+function openDrawer(){ renderDrawer(); overlayDim.classList.add('open'); cartDrawer.classList.add('open'); }
+function closeDrawer(){ overlayDim.classList.remove('open'); cartDrawer.classList.remove('open'); }
+document.getElementById('openCart').addEventListener('click', openDrawer);
+document.getElementById('closeCart').addEventListener('click', closeDrawer);
+overlayDim.addEventListener('click', ()=>{ closeDrawer(); });
+
+document.getElementById('searchInput').addEventListener('input', (e)=>{ searchTerm = e.target.value; renderMenu(); });
+
+/* ============================================================
+   CHECKOUT MODAL (Secure Multi-step with Reveal at the end)
+=============================================================== */
+const modalDim = document.getElementById('modalDim');
+const modalBox = document.getElementById('modalBox');
+let checkoutStep = 1;
+let orderInfo = { name:'', phone:'', address:'', pay:'' };
+
+function openModal(){
+  if(cartCountTotal() === 0) return;
+  checkoutStep = 1;
+  closeDrawer();
+  modalDim.classList.add('open');
+  renderModalStep();
+}
+function closeModal(){ modalDim.classList.remove('open'); }
+document.getElementById('checkoutBtn').addEventListener('click', openModal);
+
+function stepsBarHtml(active, total){
+  let s = '<div class="steps-bar">';
+  for(let i=1;i<=total;i++) s += `<span class="${i<=active?'done':''}"></span>`;
+  return s + '</div>';
+}
+
+function renderModalStep(){
+  if(checkoutStep === 1){
+    modalBox.innerHTML = `
+      <div class="modal-head">${stepsBarHtml(1,3)}</div>
+      <div class="modal-body">
+        <h3 style="font-family: var(--font-display); color: var(--ocean-deep); font-size: 1.8rem; margin-bottom:10px;">بيانات التوصيل 🛵</h3>
+        <p style="color: #4a5568; margin-bottom: 20px; font-weight: bold;">برجاء إدخال بياناتك بشكل صحيح لضمان سرعة التوصيل.</p>
+        <div class="form-row"><label>الاسم بالكامل</label><input id="fName" type="text" placeholder="الاسم" value="${escapeHTML(orderInfo.name)}"></div>
+        <div class="form-row"><label>رقم الهاتف</label><input id="fPhone" type="tel" placeholder="01xxxxxxxxx" value="${escapeHTML(orderInfo.phone)}"></div>
+        <div class="form-row"><label>العنوان بالتفصيل</label><textarea id="fAddress" rows="2" placeholder="الشارع، العمارة، رقم الشقة...">${escapeHTML(orderInfo.address)}</textarea></div>
+        <div class="modal-actions">
+          <button class="btn-back" onclick="closeModal()">إلغاء</button>
+          <button class="btn-next" id="mNext">متابعة</button>
+        </div>
+      </div>`;
+    document.getElementById('mNext').addEventListener('click', ()=>{
+      orderInfo.name = document.getElementById('fName').value;
+      orderInfo.phone = document.getElementById('fPhone').value;
+      orderInfo.address = document.getElementById('fAddress').value;
+      checkoutStep=2; renderModalStep();
+    });
+  }
+  else if(checkoutStep === 2){
+    const opts = [
+      {id:'cash', label:'💵 الدفع نقداً عند الاستلام'},
+      {id:'card', label:'💳 الدفع بالبطاقة الائتمانية (فيزا / ماستركارد)'},
+    ];
+    modalBox.innerHTML = `
+      <div class="modal-head">${stepsBarHtml(2,3)}</div>
+      <div class="modal-body">
+        <h3 style="font-family: var(--font-display); color: var(--ocean-deep); font-size: 1.8rem; margin-bottom:10px;">طريقة الدفع 💳</h3>
+        <p style="color: #4a5568; margin-bottom: 20px; font-weight: bold;">اختر طريقة الدفع المناسبة لك.</p>
+        <div class="pay-options">
+          ${opts.map(o=>`
+            <label class="pay-opt ${orderInfo.pay===o.id?'selected':''}" data-id="${o.id}">
+              <input type="radio" name="pay" value="${o.id}" ${orderInfo.pay===o.id?'checked':''}>
+              ${o.label}
+            </label>`).join('')}
+        </div>
+        <div class="total-row" style="margin-top:20px; padding-top: 15px; border-top: 2px solid #e2e8f0;">
+          <span style="color:var(--ocean-deep);">الإجمالي المطلوب:</span>
+          <span class="amt">${cartPriceTotal()} ج.م</span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-back" id="mBack">رجوع</button>
+          <button class="btn-next" id="mNext" ${!orderInfo.pay?'disabled style="opacity:0.5;"':''}>تأكيد الطلب</button>
+        </div>
+      </div>`;
+    document.getElementById('mBack').addEventListener('click', ()=>{ checkoutStep=1; renderModalStep(); });
+    modalBox.querySelectorAll('.pay-opt').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        orderInfo.pay = el.dataset.id;
+        renderModalStep();
+      });
+    });
+    const nextBtn = document.getElementById('mNext');
+    if(nextBtn) nextBtn.addEventListener('click', ()=>{ checkoutStep=3; renderModalStep(); });
+  }
+  else if(checkoutStep === 3){
+    // شاشة النهاية (الكشف عن المقلب)
+    modalBox.innerHTML = `
+      <div class="modal-body">
+        <div class="joke-screen">
+          <h2 style="font-size: 4rem; margin-bottom: 10px;">😂</h2>
+          <h2 style="font-family: var(--font-display); color: var(--ocean-deep); font-size: 2.2rem; margin-bottom: 15px;">إزيك يا فندم!</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #4a5568; font-weight:bold;">
+            معاك خدمة عملاء مطعم سلطع برجر! 🦀<br>
+            الحقيقة إن الموقع ده متبرمج بالكامل كـ مقلب لذيذ عشان ابهرك بالتصميم، مفيش أوردر بجد للأسف!<br><br>
+            بما إنك وصلت لحد هنا، يشرفني تتابعني على انستجرام.. هبدأ أقدم محتوى قوي جداً يخص الـ Cyber Security والبرمجة قريبًا إن شاء الله! 🔥
+          </p>
+          <a class="ig-btn" href="https://www.instagram.com/m3lomh_1_?igsi=ZDNlZDc0MzIxNw==" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            صفحة الانستجرام الرسمية
+          </a>
+          <button onclick="closeModal()" style="margin-top: 25px; font-weight:bold; font-size:1rem; color:#a0aec0; background:none; text-decoration:underline; cursor:pointer;">إغلاق الشاشة</button>
+        </div>
+      </div>`;
+  }
+}
+
+/* STARS */
+function setupStars(id, noteId){
+  const wrap = document.getElementById(id), note = document.getElementById(noteId);
+  wrap.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const val = parseInt(btn.dataset.v);
+      wrap.querySelectorAll('button').forEach(b=> b.classList.toggle('active', parseInt(b.dataset.v) <= val));
+      note.textContent = `تسلم إيدك! التقييم وصل: ${val} نجوم 🌟`;
+      note.style.color = 'var(--crab-coral)';
+    });
+  });
+}
+setupStars('siteStars', 'siteStarsNote');
+setupStars('staffStars', 'staffStarsNote');
+
+/* INIT */
+renderCatNav(); renderMenu(); updateCartUI();
+</script>
+</body>
+</html>
